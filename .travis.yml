@@ -1,8 +1,22 @@
 language: node_js
-deploy:
-  provider: release
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  keep_history: true
-  on:
-    branch: master
+os: linux
+node_js:
+  - 10
+# deploy:
+#   provider: release
+#   skip_cleanup: true
+#   github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+#   keep_history: true
+#   on:
+#     branch: master
+
+branchs:
+  only:
+    - master
+cache:
+  directories:
+    - node_modules
+install:
+  - npm install
+scripts:
+  - npm test
