@@ -3,11 +3,13 @@ os: linux
 node_js:
   - 10.16.0
 
+before-deploy:
+  - git tag v0.0.1
+
 deploy:
   provider: releases
   skip_cleanup: true
   keep_history: true
-  # github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   api_key:
     secure: ${GITHUB_TOKEN}
   on:
