@@ -9,7 +9,7 @@ deploy:
   keep_history: true
   # github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   api_key:
-    secure: ${GH_TOKEN}
+    secure: ${GITHUB_TOKEN}
   on:
     branch: master
 
