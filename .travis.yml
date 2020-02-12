@@ -4,7 +4,7 @@ node_js:
   - 10.16.0
 
 before-deploy:
-  - git tag v0.0.1
+  # - git tag v0.0.3 
 
 deploy:
   provider: releases
